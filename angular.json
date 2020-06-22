@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/custom-theme.scss",
+              "src/styles.css", 
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,7 +69,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ui-shopmanager-controlpanel:build"
+            "browserTarget": "ui-shopmanager-controlpanel:build",
+            "port": 8282
           },
           "configurations": {
             "production": {
@@ -120,6 +127,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ui-shopmanager-controlpanel"
 }
